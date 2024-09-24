@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,22 +11,26 @@
     </ion-toolbar>
   </ion-header>
 
+  <img src="./assets/images/icono.png" class="imagen">
+
   <div class="DatosRegister">
+    <br>
+    <ion-item>
+      <ion-input label="Correo" labelPlacement="floating" placeholder="Ingresa un correo"></ion-input>
+    </ion-item>
+    <br>
     <ion-item>
       <ion-input label="Usuario" labelPlacement="floating" placeholder="Ingresa un usuario"></ion-input>
     </ion-item>
-  
+    <br>
     <ion-item>
       <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingresa una contraseña"></ion-input>
     </ion-item>
-
-    <ion-item>
-      <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingresa una contraseña"></ion-input>
-    </ion-item>
+    <br>
     </div>
   
     <div class="BotonRegister">
-      <ion-button shape="round">Continuar</ion-button>
+      <ion-button shape="round" color="dark">Crear usuario</ion-button>
     </div>
 
 </ion-content>

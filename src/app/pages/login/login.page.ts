@@ -16,8 +16,6 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  OnLoginButtonPressed {
-    this.router.navigate(['/register'])
+  // OnLoginButtonPressed {
+  //  this.router.navigate(['/register'])
   }
-
-}
