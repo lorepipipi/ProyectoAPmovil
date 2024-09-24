@@ -6,16 +6,20 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  Usuario: string = '';
+  Contrasena: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  Usuario: String = '';
-  Contraseña: String = '';
+  login() {
+    const user = 'zzz';
+    const password = 'zzz';
 
-  ngOnInit() {
+    if (this.Usuario === user && this.Contrasena === password) {
+      this.router.navigate(['/home']);
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
   }
-
-  // OnLoginButtonPressed {
-  //  this.router.navigate(['/register'])
-  }
+}

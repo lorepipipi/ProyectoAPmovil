@@ -21,17 +21,17 @@
   <div class="DatosLogin">
   <br>
   <ion-item>
-    <ion-input label="Usuario" labelPlacement="floating" placeholder="Ingresa tu usuario"></ion-input>
+    <ion-input label="Usuario" labelPlacement="floating" placeholder="Ingresa tu usuario" [(ngModel)]="Usuario"></ion-input>
   </ion-item>
   <br>
   <ion-item>
-    <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingresa tu contraseña"></ion-input>
+    <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingresa tu contraseña" [(ngModel)]="Contrasena"></ion-input>
   </ion-item>
   <br>
   </div>
 
   <div class="BotonLogin">
-    <ion-button shape="round" color="dark">Continuar</ion-button>
-  </div>
+    <ion-button shape="round" color="dark" (click)="login()">Continuar</ion-button>
+  </div>  
 
 </ion-content>
