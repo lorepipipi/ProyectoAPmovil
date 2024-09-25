@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,23 +8,28 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   users = [
-    { image: 'assets/img/user1.jpg', name: 'Usuario 1' },
-    { image: 'assets/img/user2.jpg', name: 'Usuario 2' },
-    { image: 'assets/img/user3.jpg', name: 'Usuario 3' },
+    { name: 'Usuario 1', image: './assets/images/png-transparent-black-cat-kitten-cats-mammal-cat-like-mammal-animals-thumbnail.png' },
+    { name: 'Usuario 2', image: './assets/images/png-transparent-british-shorthair-american-shorthair-kitten-chartreux-persian-cat-cats-mammal-cat-like-mammal-animals-thumbnail.png' },
+    { name: 'Usuario 3', image: './assets/images/png-transparent-brown-cat-keeping-cats-mouse-dog-kitten-cats-mammal-animals-cat-like-mammal-thumbnail.png' },
+    { name: 'Usuario 4', image: './assets/images/png-transparent-cat-food-kitten-pet-dog-food-cats-mammal-food-cat-like-mammal-thumbnail.png' },
+    { name: 'Usuario 5', image: './assets/images/png-transparent-cat-kitten-cats-mammal-animals-cat-like-mammal-thumbnail.png' },
+    { name: 'Usuario 6', image: './assets/images/png-transparent-grumpy-cat-kitten-cats-animals-cat-like-mammal-carnivoran-thumbnail.png' },
+    { name: 'Usuario 7', image: './assets/images/png-transparent-kitten-cat-giant-panda-two-cats-white-mammal-animals-thumbnail.png' },
   ];
 
   communityPosts = [
-    {
-      userImage: 'assets/img/user1.jpg',
-      userName: 'Usuario 1',
-      text: 'Esta es una conversación de ejemplo en la comunidad.',
-    },
-    {
-      userImage: 'assets/img/user2.jpg',
-      userName: 'Usuario 2',
-      text: 'Hola a todos, ¿cómo están?',
-    },
+    { userName: 'Usuario 1', userImage: './assets/images/png-transparent-kitten-graphy-cat-birthday-cake-cats-hat-cat-like-mammal-animals-thumbnail.png', text: 'Esta es una conversación de ejemplo en la comunidad.' },
+    { userName: 'Usuario 2', userImage: './assets/images/png-transparent-sphynx-cat-oriental-shorthair-kitten-dog-allergy-to-cats-kitten-mammal-cat-like-mammal-animals-thumbnail.png', text: 'Hola a todos, ¿cómo están?' },
   ];
 
-  constructor() { }
+  moreCommunityPosts = [
+    { userName: 'Usuario 3', userImage: './assets/images/png-transparent-wildcat-kitten-pet-dog-cats-cat-like-mammal-animals-carnivoran-thumbnail.png', text: '¿Alguien ha visto las nuevas actualizaciones?' },
+    { userName: 'Usuario 4', userImage: './assets/images/png-transparent-tabby-cat-kitten-cats-mammal-animals-cat-like-mammal-thumbnail.png', text: 'Sí, son geniales, ¡me encanta el nuevo diseño!' },
+    { userName: 'Usuario 5', userImage: './assets/images/png-transparent-kitten-cat-giant-panda-two-cats-white-mammal-animals-thumbnail.png', text: '¿Cuándo será el próximo evento de la comunidad?' },
+    { userName: 'Usuario 6', userImage: './assets/images/png-transparent-black-cat-kitten-cats-mammal-cat-like-mammal-animals-thumbnail.png', text: 'Espero que pronto, el último evento fue increíble.' },
+    { userName: 'Usuario 7', userImage: './assets/images/png-transparent-kitten-graphy-cat-birthday-cake-cats-hat-cat-like-mammal-animals-thumbnail.png', text: 'He estado trabajando en un nuevo proyecto, ¿alguien quiere colaborar?' },
+    { userName: 'Usuario 8', userImage: './assets/images/png-transparent-black-cat-kitten-cats-mammal-cat-like-mammal-animals-thumbnail.png', text: 'Me encantaría colaborar, ¿de qué trata tu proyecto?' },
+  ];
+
+  constructor() {}
 }

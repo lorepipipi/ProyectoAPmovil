@@ -3,42 +3,64 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+
+    <ion-title>NexoSocial</ion-title>
+
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
       </ion-button>
       <ion-button>
-        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
-      </ion-button>
-      <ion-button>
         <ion-avatar slot="icon-only">
-          <img src="assets/img/user-avatar.png" alt="User Avatar">
+          <img src="./assets/images/png-transparent-kitten-cat-giant-panda-two-cats-white-mammal-animals-thumbnail.png" alt="User Avatar">
         </ion-avatar>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-slides pager="true">  <!-- Agregando 'ion-slides' -->
-      <ion-slide *ngFor="let user of users">  <!-- Usando 'ion-slide' -->
-        <ion-img [src]="user.image"></ion-img>
-        <ion-label>{{ user.name }}</ion-label>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Searchbar -->
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+
+  <!-- Carrusel de Usuarios -->
+  <h2 class="section-title"></h2>
+  <ion-card class="carousel-card">
+    <ion-slides pager="true" options="{ slidesPerView: 1.5, spaceBetween: 10 }">
+      <ion-slide *ngFor="let user of users">
+        <ion-avatar>
+          <img [src]="user.image" alt="User Image">
+        </ion-avatar>
+        <div class="overlay-text">descripcion</div> <!-- Texto encima de la imagen -->
+        <ion-label>{{ user.name }}</ion-label> <!-- Nombre del usuario debajo de la imagen -->
       </ion-slide>
     </ion-slides>
   </ion-card>
 
+  <!-- Texto/Lista de Conversaciones -->
+  <h2 class="section-title">comunity</h2>
   <ion-list>
     <ion-item *ngFor="let post of communityPosts">
       <ion-avatar slot="start">
         <img [src]="post.userImage" alt="User Avatar">
       </ion-avatar>
       <ion-label>
-        <h2>{{ post.userName }}</h2>
+        <h3>{{ post.userName }}</h3>
+        <p>{{ post.text }}</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Más conversaciones para extender el contenido -->
+    <ion-item *ngFor="let post of moreCommunityPosts">
+      <ion-avatar slot="start">
+        <img [src]="post.userImage" alt="User Avatar">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{ post.userName }}</h3>
         <p>{{ post.text }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
+
 </ion-content>
