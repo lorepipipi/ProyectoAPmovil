@@ -12,29 +12,26 @@
   </ion-header>
 
   <div class="contenedor-registro">
+    <img src="./assets/images/icono.png" class="imagen">
 
-  <img src="./assets/images/icono.png" class="imagen">
-
-  <div class="DatosRegister">
-    <br>
-    <ion-item>
-      <ion-input label="Correo" labelPlacement="floating" placeholder="Ingresa un correo"></ion-input>
-    </ion-item>
-    <br>
-    <ion-item>
-      <ion-input label="Usuario" labelPlacement="floating" placeholder="Ingresa un usuario"></ion-input>
-    </ion-item>
-    <br>
-    <ion-item>
-      <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingresa una contraseña"></ion-input>
-    </ion-item>
-    <br>
+    <div class="DatosRegister">
+      <br>
+      <ion-item>
+        <ion-input [(ngModel)]="email" label="Correo" labelPlacement="floating" placeholder="Ingresa un correo"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input [(ngModel)]="username" label="Usuario" labelPlacement="floating" placeholder="Ingresa un usuario"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input [(ngModel)]="password" type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingresa una contraseña"></ion-input>
+      </ion-item>
+      <br>
     </div>
   
     <div class="BotonRegister">
-      <ion-button shape="round" color="dark">Crear usuario</ion-button>
+      <ion-button shape="round" color="dark" (click)="register()">Crear usuario</ion-button>
     </div>
-
   </div>
-
 </ion-content>
