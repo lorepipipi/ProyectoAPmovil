@@ -1,21 +1,26 @@
-ion-item {
-    --padding-start: 0; /* Ajusta el padding si es necesario */
-    --padding-end: 0;
-  }
+ion-input {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: none;
+}
   
-  ion-input {
-    border: 1px solid black; /* Establece el color y el grosor del borde */
-    border-radius: 15px; /* Ajusta el radio para bordes redondeados */
-    box-shadow: none;
-  }
-  
-  .ion-page {
-      background-color: #f0f0f0;
-    }
+.ion-page {
+    background-color: #f0f0f0;
+}
 
-    .imagen {
-      display: block;
-      margin: 0 auto;
-      width: 150px; /* Ajusta el tamaño del icono */
-      border-radius: 50%; /* Si quieres que sea circular */
-    }  
+.imagen {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 50%;
+  } 
+
+.contenedor-registro {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+}

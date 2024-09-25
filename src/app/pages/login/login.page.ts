@@ -19,7 +19,7 @@ export class LoginPage {
     if (this.Usuario === user && this.Contrasena === password) {
       this.router.navigate(['/home']);
     } else {
-      alert('Usuario o contraseña incorrectos');
+      alert('Datos incorrectos');
     }
   }
 }
